@@ -1,0 +1,156 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Mogra&family=Nova+Round&display=swap');
+/* font-family: 'Mogra', cursive; */
+/* font-family: 'Nova Round', cursive; */
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+li, ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+body{
+    background-color: #0a222b;
+    text-align: center;
+}
+.c{
+    background-image: url("../img/cover.png");
+    background-size: cover;
+    padding-top: 20%;
+    padding-bottom: 10%;
+    background-position: bottom;
+    color: azure;
+    transition: padding .5s;
+}
+.c_tit{
+    font-family: 'Mogra', cursive;
+    font-size: 10vw;
+    font-weight: normal;
+    font-style: italic;
+    transition: font-size .5s;
+    line-height: 1;
+}
+.c_tit span{
+    font-size: .3em;
+    display: block;
+    font-family: 'Nova Round', cursive;
+    font-style: normal;
+}
+.wrap{
+    padding: 0 20px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+.tl{
+    position: relative;
+}
+
+.tl::after{
+    content: "";
+    background-color: rgba(0, 0, 0, .5);
+    position: absolute;
+    left: 50%;
+    width: 6px;
+    top: 5vw;
+    bottom: 0;
+    transform: translateX(-50%);
+    z-index: -1;
+    /* display: none; */
+}
+.tlm{
+    margin-top: 70px;
+}
+.card{
+    background-color: rgba(0, 0, 0, .3);
+    color: #999;
+    padding: 0 20px 20px 20px;
+    border-radius: 30px;
+}
+.card1{
+    width: 70px;
+    height: auto;
+    vertical-align: top;
+    margin: -35px 30px 0;
+}
+.card_tit{
+    font-size: 20vw;
+    color: dodgerblue;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 20px;
+    line-height: 1;
+}
+
+
+
+.cd{
+    margin: 20px;
+
+}
+.cd dt{
+    font-size: 25px;
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+@media screen and (min-width:720px){
+    .c{
+        padding-top: 10%;
+        padding-bottom: 5%;
+    }
+    .c_tit{
+        font-size: 10vw;
+    }
+    .tl::after{
+        background-color: dodgerblue;
+    }
+    .tlm{
+        width: 50%;
+        padding: 0 20px;
+        box-sizing: border-box;
+        text-align: right;
+    }
+    .tl li:nth-child(even){
+        text-align: left;
+        margin-left: auto;
+        margin-top: -150px;
+        margin-bottom: -200px;
+    }
+    .card_tit{
+        font-size: 10vw;
+        display: inline-block;
+    }
+    .card_tit::after{
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: -1.9rem;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        border: 5px dodgerblue solid;
+        background: #0a222b;
+        z-index: 10;
+    }
+    .tl li:nth-child(even) .card_tit::after{
+        right: 22.5rem;
+    }
+    .card{
+        position: relative;
+    }
+    .card1{
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .tl li:nth-child(even) .card1{
+        left: auto;
+        right: 0;
+    }
+}
